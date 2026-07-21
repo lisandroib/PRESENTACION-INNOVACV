@@ -230,6 +230,10 @@ Análisis masivo y veloz para comparar un perfil contra múltiples ofertas de em
 layout: two-cols
 ---
 
+<script setup>
+import AtsScanner from './components/AtsScanner.vue'
+</script>
+
 # Exportación Vectorial (ATS Friendly)
 
 La legibilidad del documento por parte del software de contratación es la prioridad técnica absoluta:
