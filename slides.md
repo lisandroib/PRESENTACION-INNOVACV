@@ -246,7 +246,7 @@ Análisis masivo y veloz para comparar un perfil contra múltiples ofertas de em
 -->
 
 ---
-layout: default
+layout: two-cols
 ---
 
 # Exportación Vectorial (ATS Friendly)
@@ -257,6 +257,12 @@ La legibilidad del documento por parte del software de contratación es la prior
 * 🌐 **Impresión Nativa**: Uso de la librería `react-to-print` para interactuar directamente con el motor de impresión CSS nativo del navegador web.
 * ✏️ **Vectores de Texto Puro**: Genera archivos PDF compuestos por caracteres vectoriales y enlaces interactivos estructurados.
 * 🔍 **Legibilidad del 100%**: Asegura que las palabras clave de los candidatos sean indexadas de manera impecable por los parsers de recursos humanos (ATS).
+
+::right::
+
+<div class="pl-6 h-full flex items-center justify-center">
+  <AtsScanner />
+</div>
 
 <!--
 "Esta es la culminación técnica del sistema. A diferencia de competidores que transforman el documento en una imagen inerte, nosotros invocamos el motor nativo del navegador. Esto asegura un PDF con vectores de texto puro, garantizando que el documento sea indexable y 100% legible por los parsers de Recursos Humanos."
@@ -288,6 +294,8 @@ layout: default
 ---
 
 # Conclusiones
+<br>
+<br>
 
 <div class="flex flex-col justify-center h-[75%]">
 
