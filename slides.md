@@ -328,8 +328,8 @@ class: text-center
       ¡Muchas Gracias!
     </div>
   </SparklesText>
-  <div class="mt-8 text-sm opacity-60">
-    <p>InnovaCV - Plataforma Inteligente de Currículums</p>
+  <div class="mt-8">
+    <div class="logo-title-cover" style="font-size: 2rem !important;">INNOVA<span class="logo-cv-cover">CV</span></div>
   </div>
 
 </div>
