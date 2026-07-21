@@ -72,10 +72,11 @@ layout: center
 ---
 
 # Solución Propuesta: Flujo General
+<br>
+<br>
+<br>
 
-<br>
-<br>
-<br>
+<div class="flex justify-center transform scale-300 origin-center mt-6">
 
 ```mermaid
 graph LR
@@ -103,6 +104,8 @@ graph LR
     style G fill:#fce7f3,stroke:#db2777,stroke-width:2px
     style P fill:#fee2e2,stroke:#dc2626,stroke-width:2px
 ```
+
+</div>
 
 <!--
 "La plataforma acompaña al usuario desde el 'bloqueo de la página en blanco'. Primero recolectamos su historia como si fuera una entrevista, luego la IA la optimiza y finalmente nuestro editor ensambla un documento listo para superar los filtros."
@@ -198,9 +201,7 @@ Ecosistema integrado y de alta reactividad para el perfeccionamiento del documen
 ::right::
 
 <div class="pl-6 pt-6">
-  <div class="mockup-card-slides">
-    <img src="./demostracion_landing.png" alt="InnovaCV Editor Mockup" />
-  </div>
+  <CardCarousel />
 </div>
 
 <!--
@@ -222,12 +223,22 @@ Análisis masivo y veloz para comparar un perfil contra múltiples ofertas de em
 
 ::right::
 
-<div class="pl-6 h-full flex flex-col justify-center gap-4">
-  <AnalyzingLoader />
-  <img 
-    src="./Procesamiento Batch de Compatibilidad Laboral.png" 
-    class="rounded-xl shadow-lg border border-gray-200/30 dark:border-gray-700/30 max-h-[250px] w-auto object-contain mx-auto" 
-  />
+<div class="pl-6 h-full flex flex-col justify-center gap-2">
+  <div class="w-full flex justify-start transform scale-90 origin-left">
+    <AnalyzingLoader />
+  </div>
+  <div class="relative w-full max-w-[440px] h-[290px] mx-auto mt-2">
+    <!-- Imagen de fondo (Buscador) -->
+    <img 
+      src="./Buscador.png" 
+      class="absolute top-0 left-0 z-10 rounded-xl shadow-md border border-gray-200/20 dark:border-gray-700/20 max-h-[195px] w-auto object-contain opacity-70 transform -rotate-3" 
+    />
+    <!-- Imagen de frente (Procesamiento Batch) -->
+    <img 
+      src="./Procesamiento Batch de Compatibilidad Laboral.png" 
+      class="absolute bottom-0 right-0 z-20 rounded-xl shadow-xl border border-gray-200/40 dark:border-gray-700/40 max-h-[205px] w-auto object-contain transform translate-x-6 translate-y-10 hover:scale-105 transition-transform duration-300" 
+    />
+  </div>
 </div>
 
 <!--
