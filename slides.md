@@ -201,23 +201,7 @@ Ecosistema integrado y de alta reactividad para el perfeccionamiento del documen
 ::right::
 
 <div class="pl-6 pt-6">
-  <div class="relative w-full max-w-[420px] h-[300px] mx-auto mt-4 flex items-center justify-center">
-    <!-- Primera imagen detrás (educación): a la izquierda y rotada -->
-    <img 
-      src="./educacion.png" 
-      class="absolute top-2 left-2 z-10 rounded-xl shadow-md border border-gray-200/20 dark:border-gray-700/20 max-h-[170px] w-auto object-contain opacity-40 transform -rotate-6" 
-    />
-    <!-- Segunda imagen detrás (perfil): a la derecha y rotada -->
-    <img 
-      src="./perfil.png" 
-      class="absolute top-2 right-2 z-10 rounded-xl shadow-md border border-gray-200/20 dark:border-gray-700/20 max-h-[170px] w-auto object-contain opacity-40 transform rotate-6" 
-    />
-    <!-- Imagen de frente (demostración de la interfaz): al frente y más grande -->
-    <img 
-      src="./demostracion_landing.png" 
-      class="absolute top-10 z-20 rounded-xl shadow-2xl border border-gray-200/40 dark:border-gray-700/40 max-h-[200px] w-auto object-contain hover:scale-105 transition-transform duration-300" 
-    />
-  </div>
+  <CardCarousel />
 </div>
 
 <!--
