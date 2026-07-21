@@ -8,6 +8,10 @@ fonts:
   sans: Poppins
 ---
 
+<script setup>
+import AtsScanner from './components/AtsScanner.vue'
+</script>
+
 <div class="mb-8">
   <SparklesText :sparklesCount="16">
     <div class="logo-title-cover">INNOVA<span class="logo-cv-cover">CV</span></div>
@@ -230,9 +234,7 @@ Análisis masivo y veloz para comparar un perfil contra múltiples ofertas de em
 layout: two-cols
 ---
 
-<script setup>
-import AtsScanner from './components/AtsScanner.vue'
-</script>
+
 
 # Exportación Vectorial (ATS Friendly)
 
@@ -309,10 +311,29 @@ class: text-center
 * 🎤 **Simulador de Entrevistas**: Generación de simulaciones de entrevistas dinámicas basadas en la IA de Gemini con la información ya almacenada del candidato.
 * 🌐 **i18n y Adaptación Local**: Traducción y adecuación automática del CV a normas y formatos internacionales.
 
-<div class="pt-8">
-  <a href="#1" class="btn-gradient">Volver al Inicio</a>
-</div>
+
 
 <!--
 "Para el futuro, vislumbramos expandir la plataforma con extracciones nativas de LinkedIn vía OAuth y aprovechar el contexto ya guardado para generar simulaciones de entrevistas de trabajo en tiempo real. Muchas gracias por su atención."
+-->
+
+---
+layout: center
+class: text-center
+---
+
+<div class="flex flex-col items-center justify-center h-full">
+  <SparklesText :sparklesCount="18">
+    <div class="text-7xl font-black bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent p-4 tracking-wide leading-normal">
+      ¡Muchas Gracias!
+    </div>
+  </SparklesText>
+  <div class="mt-8 text-sm opacity-60">
+    <p>InnovaCV - Plataforma Inteligente de Currículums</p>
+  </div>
+
+</div>
+
+<!--
+"Con esto finalizamos la exposición de nuestro proyecto InnovaCV. Agradecemos su tiempo y quedamos a disposición del jurado para responder a sus preguntas y comentarios."
 -->
