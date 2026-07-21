@@ -418,3 +418,22 @@ html.dark .profile-decor-backdrop .orb-purple {
   color: var(--color-logo-cv) !important;
   opacity: 1 !important;
 }
+
+/* Animación global para todas las viñetas (ul li) */
+.slidev-layout ul > li {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.slidev-layout ul > li:nth-child(1) { animation-delay: 0.5s; }
+.slidev-layout ul > li:nth-child(2) { animation-delay: 1.0s; }
+.slidev-layout ul > li:nth-child(3) { animation-delay: 1.5s; }
+.slidev-layout ul > li:nth-child(4) { animation-delay: 2.0s; }
+.slidev-layout ul > li:nth-child(5) { animation-delay: 2.5s; }
+.slidev-layout ul > li:nth-child(6) { animation-delay: 3.0s; }
+.slidev-layout ul > li:nth-child(7) { animation-delay: 3.5s; }
+.slidev-layout ul > li:nth-child(8) { animation-delay: 4.0s; }
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
