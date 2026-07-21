@@ -115,6 +115,37 @@ graph LR
 layout: two-cols
 ---
 
+# Recolección de Datos (Typebot)
+
+La plataforma recopila la información del usuario de manera conversacional y estructurada:
+
+* 👤 **Datos Personales**: Información de contacto, enlaces y ubicación.
+* 🎓 **Formación Académica**: Historial educativo, instituciones y títulos.
+* 💼 **Experiencia Laboral**: Roles desempeñados, fechas y responsabilidades.
+* 🛠️ **Habilidades**: Competencias técnicas (hard skills) y aptitudes (soft skills).
+* 📝 **Perfil Profesional**: Resumen o extracto introductorio del candidato.
+
+::right::
+
+<div class="pl-6 h-full flex flex-col justify-center">
+  <video 
+    src="./demo-typebot1.mp4" 
+    autoplay 
+    loop 
+    muted 
+    class="rounded-xl shadow-xl border border-gray-200/30 dark:border-gray-700/30 w-full h-auto"
+    @loadeddata="$event.target.playbackRate = 2.0"
+  ></video>
+</div>
+
+<!--
+"A través de Typebot, transformamos el tedioso llenado de formularios en una entrevista interactiva. Recolectamos datos de contacto, educación, experiencia y habilidades paso a paso, mitigando la fricción inicial y preparando la estructura perfecta para la IA."
+-->
+
+---
+layout: two-cols
+---
+
 # Arquitectura y Stack Tecnológico
 Estructura modular desacoplada para garantizar escalabilidad, velocidad y seguridad:
 * **Frontend / Backend**: Next.js 15 (App Router) y React 19.
