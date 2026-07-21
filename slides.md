@@ -112,25 +112,6 @@ graph LR
 -->
 
 ---
-layout: default
----
-
-# Estado del Arte
-
-Análisis comparativo de soluciones existentes frente al enfoque de InnovaCV:
-
-| Criterio | Canva | Jobscan | Kickresume | InnovaCV |
-| :--- | :---: | :---: | :---: | :---: |
-| **Calidad de Diseño** | 🟢 Alto | 🔴 Nulo | 🟡 Medio | 🟢 Alto |
-| **Compatibilidad ATS** | 🔴 Baja (Rasterizado/Tablas) | 🟢 Alta (Solo Análisis) | 🟡 Media | 🟢 Alta (Texto Vectorial) |
-| **Asistencia con IA** | 🟡 Limitada (Texto Simple) | 🔴 No posee | 🟡 Básica | 🟢 Avanzada (Gemini + RAG) |
-| **Foco del Sistema** | Estética visual general | Validación de palabras clave | Editor con plantillas básicas | Optimización semántica y ATS |
-
-<!--
-"Al analizar el mercado, vimos que herramientas como Canva priorizan la estética pero fallan en la compatibilidad ATS, mientras que los analizadores como Jobscan no asisten en la creación. InnovaCV unifica estética, generación de contenido con IA y excelencia técnica del documento final."
--->
-
----
 layout: two-cols
 ---
 
