@@ -132,131 +132,34 @@ layout: two-cols
 ---
 
 # Arquitectura y Stack Tecnológico
-
 Estructura modular desacoplada para garantizar escalabilidad, velocidad y seguridad:
-
 * **Frontend / Backend**: Next.js 15 (App Router) y React 19.
 * **Estilos**: TailwindCSS 4 para una interfaz responsive y ágil.
-* **Persistencia**: MongoDB para un modelado flexible de documentos.
+* **Persistencia**: MongoDB Atlas para un modelado flexible de documentos.
 * **Seguridad**: Autenticación JWT stateless cifrada con `bcryptjs`.
 * **Servicios Externos**: Google Gemini API y Typebot.
 ::right::
-
 <div class="pl-6">
   <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">Flujo de Datos Seguro</h3>
   
 ```mermaid
 graph TD
-  C[Cliente - React 19] <-->|Server Actions / Cifrado| N[Next.js Serverless Proxy]
-  N <-->|Conexión Segura| M[(MongoDB Atlas)]
-  N <-->|SSL API Keys| G((Gemini API))
+  C[Cliente - React 19] <-->|Peticiones HTTPS / JSON| N[Servidor Next.js - API Routes]
+  C <-->|IFrame / Web| T(Typebot Cloud)
+  T -->|Webhook / API| M[(MongoDB Atlas)]
+  N <-->|Conexión Segura Driver| M
+  N <-->|SSL API Key| G((Gemini API))
+  
   style C fill:#eff6ff,stroke:#6147FF,stroke-width:1px
   style N fill:#f1f3f9,stroke:#4f46e5,stroke-width:2px
+  style T fill:#fff7ed,stroke:#ea580c,stroke-width:1px
+  style M fill:#f0fdf4,stroke:#16a34a,stroke-width:1px
+  style G fill:#faf5ff,stroke:#9333ea,stroke-width:1px
 ```
 </div>
 
 <!--
 "Adoptamos un patrón Cliente-Servidor desacoplado dentro de Next.js. El servidor de Next.js actúa como un proxy inverso seguro mediante funciones Serverless, lo que nos permite ocultar las API Keys de Gemini y conectarnos asíncronamente con MongoDB sin exponer lógica crítica al cliente."
--->
-
----
-layout: two-cols
----
-
-# Recolección de Datos (Typebot)
-
-El punto de partida del usuario es una conversación fluida en lugar de un formulario rígido:
-
-* **Entrevista Guiada**: El bot realiza preguntas secuenciales de manera interactiva sobre educación, experiencia laboral y metas.
-* **Baja Fricción**: Disminuye la tasa de abandono típica en la creación de currículums.
-* **Estructuración Semántica**: El diálogo del cliente se serializa dinámicamente.
-* **Formato Tipado**: Los datos recogidos se transforman nativamente en un objeto JSON limpio y tipado para su envío seguro al servidor.
-
-::right::
-
-<div class="pl-6 pt-4">
-  <h3 class="font-bold text-sm mb-2 text-gray-800 dark:text-white">Estructura JSON Generada</h3>
-
-```json
-{
-  "datosPersonales": {
-    "nombre": "Agustina Prado Ruiz",
-    "titulo": "Ingeniera en Informática"
-  },
-  "experiencia": [
-    {
-      "empresa": "Tech Solutions",
-      "puesto": "Desarrolladora Frontend",
-      "periodo": "2024 - Presente"
-    }
-  ],
-  "habilidades": ["React", "Next.js", "TS"]
-}
-```
-</div>
-
-<!--
-"Typebot no es solo una interfaz amigable que reduce el abandono; arquitectónicamente actúa como un motor de serialización. A medida que el usuario chatea, los datos se estructuran en formato JSON y se envían limpios y tipados a nuestros endpoints de Next.js para su almacenamiento en MongoDB."
--->
-
----
-layout: default
----
-
-# Inteligencia Artificial (Google Gemini API)
-
-La optimización de currículums depende de un procesamiento semántico avanzado de lenguaje natural:
-
-* **Modelo Seleccionado**: `gemini-2.5-flash` debido a su baja latencia de inferencia y su extensa ventana de contexto (ideal para inyectar perfiles completos).
-* **Ingeniería de Prompts**: Se envían las descripciones laborales del candidato junto con reglas estrictas de redacción orientadas a ATS (verbos de acción, impacto cuantificable).
-* **Respuestas Estructuradas**: Forzado mediante **JSON Schema** para asegurar que el modelo retorne un objeto tipado predecible, evitando alucinaciones de formato Markdown en las habilidades sugeridas.
-
-```typescript
-// Forzado de esquema JSON en la configuración del modelo de Gemini
-const response = await ai.models.generateContent({
-  model: 'gemini-2.5-flash',
-  contents: 'Optimiza la experiencia laboral...',
-  config: { responseMimeType: 'application/json', responseSchema: schema }
-});
-```
-
-<!--
-"Elegimos Gemini por su gran ventana de contexto, vital para inyectar historiales laborales completos. Además, forzamos a la IA a responder usando JSON Schema estrictos, garantizando que el sistema consuma arreglos de datos predecibles en lugar de texto libre."
--->
-
----
-layout: two-cols
----
-
-# Modelo de Datos NoSQL (MongoDB)
-
-Implementamos una base de datos orientada a documentos para manejar perfiles con estructuras altamente variables:
-
-* **Esquemas Dinámicos**: Permite modelar currículums que tienen diferentes secciones y profundidades académicas o laborales.
-* **Colecciones Core**: `usuarios`, `perfiles`, `cv_perfiles` y `ofertas`.
-* **Optimización de Renderizado**: Se almacena el estado visual/HTML directamente en `cv_perfiles`.
-* **Eficiencia**: Evita procesos costosos de compilación en caliente en el backend, reduciendo la latencia de renderizado.
-
-::right::
-
-<div class="pl-6 pt-4">
-  <h3 class="font-bold text-sm mb-2 text-gray-800 dark:text-white">Documento de Persistencia</h3>
-
-```json
-{
-  "_id": "ObjectId('65d...14')",
-  "userId": "ObjectId('65d...02')",
-  "cv_data": {
-    "nombre_cv": "Versión IT - Backend",
-    "htmlContent": "<div class='cv'>...</div>"
-  },
-  "updatedAt": "2026-07-10T19:46:00Z"
-}
-```
-</div>
-
-<!--
-"Implementamos una base de datos orientada a documentos por la variabilidad estructural de los currículums. Una optimización crítica fue evitar compilar PDFs en la nube; en su lugar, guardamos el estado de edición en HTML plano dentro de la colección cv_perfiles, reduciendo drásticamente la latencia y los costos de almacenamiento."
 -->
 
 ---
@@ -283,7 +186,7 @@ Protección de datos personales y sensibles mediante arquitectura de seguridad m
 layout: two-cols
 ---
 
-# Interfaz y Funcionalidades Core
+# Interfaz y Funcionalidades
 
 Ecosistema integrado y de alta reactividad para el perfeccionamiento del documento:
 
@@ -305,17 +208,26 @@ Ecosistema integrado y de alta reactividad para el perfeccionamiento del documen
 -->
 
 ---
-layout: default
+layout: two-cols
 ---
 
 # Procesamiento Batch de Compatibilidad Laboral
 
 Análisis masivo y veloz para comparar un perfil contra múltiples ofertas de empleo:
 
-* **API Batch**: Endpoint `/api/jobs/compare-batch` diseñado para enviar el currículum del usuario junto con un bloque de 10 ofertas de trabajo en una sola llamada de API.
-* **Mitigación de Latencia**: Reduce drásticamente las llamadas de red y optimiza el consumo de tokens del modelo.
-* **Rendimiento UI**: Implementación de carga diferida (lazy loading) en el frontend mediante la API `IntersectionObserver`.
-* **Resultados Fluidos**: El cálculo de la puntuación de compatibilidad (%) para cada oferta laboral se procesa y muestra silenciosamente en segundo plano a medida que el usuario hace scroll.
+* **API Batch**: Endpoint `/api/jobs/compare-batch` diseñado para enviar el currículum del usuario junto con un bloque de 10 ofertas en una sola llamada.
+* **Mitigación de Latencia**: Reduce las llamadas de red y optimiza el consumo de tokens.
+* **Rendimiento UI**: Carga diferida (*lazy loading*) mediante la API `IntersectionObserver`.
+* **Resultados Fluidos**: El cálculo de la compatibilidad (%) se realiza en segundo plano a medida que se hace scroll.
+
+::right::
+
+<div class="pl-6 h-full flex items-center justify-center">
+  <img 
+    src="./Procesamiento Batch de Compatibilidad Laboral.png" 
+    class="rounded-xl shadow-lg border border-gray-200/30 dark:border-gray-700/30 max-h-[380px] w-auto object-contain mx-auto" 
+  />
+</div>
 
 <!--
 "Uno de los mayores logros analíticos fue el comparador de empleos. Para evitar saturar la red con peticiones individuales, empaquetamos el CV y 10 ofertas en una sola petición Batch. Usamos la API IntersectionObserver en el frontend para ejecutar estas llamadas silenciosamente en segundo plano mientras el usuario hace scroll, manteniendo la UI fluida."
