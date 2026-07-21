@@ -251,38 +251,6 @@ La legibilidad del documento por parte del software de contratación es la prior
 "Esta es la culminación técnica del sistema. A diferencia de competidores que transforman el documento en una imagen inerte, nosotros invocamos el motor nativo del navegador. Esto asegura un PDF con vectores de texto puro, garantizando que el documento sea indexable y 100% legible por los parsers de Recursos Humanos."
 -->
 
----
-layout: default
----
-
-# Pruebas y Rendimiento
-
-La plataforma se sometió a rigurosas mediciones de tiempo de carga y consumo de red:
-
-<div class="grid grid-cols-3 gap-6 mt-8">
-  <div class="benefit-card-slides text-center">
-    <div class="text-3xl mb-2">⚡</div>
-    <div class="font-bold text-lg mb-1 text-gray-800 dark:text-white">Persistencia CRUD</div>
-    <div class="text-xl font-semibold text-indigo-600 mt-2">70 - 180 ms</div>
-    <p class="text-sm text-gray-500 mt-2">Latencia de lectura/escritura asíncrona en MongoDB.</p>
-  </div>
-  <div class="benefit-card-slides text-center">
-    <div class="text-3xl mb-2">🧠</div>
-    <div class="font-bold text-lg mb-1 text-gray-800 dark:text-white">Generación de IA</div>
-    <div class="text-xl font-semibold text-indigo-600 mt-2">1.5 - 3.0 s</div>
-    <p class="text-sm text-gray-500 mt-2">Tiempo medio de respuesta estructurada con Gemini.</p>
-  </div>
-  <div class="benefit-card-slides text-center">
-    <div class="text-3xl mb-2">🚀</div>
-    <div class="font-bold text-lg mb-1 text-gray-800 dark:text-white">Carga de UI (FCP)</div>
-    <div class="text-xl font-semibold text-indigo-600 mt-2">&lt; 0.8 s</div>
-    <p class="text-sm text-gray-500 mt-2">Primer despliegue visual de la interfaz gracias a Next.js SSR.</p>
-  </div>
-</div>
-
-<!--
-"Sometimos la plataforma a pruebas de latencia. La segregación de responsabilidades permitió operaciones de lectura/escritura ultra rápidas, por debajo de los 180 milisegundos, ofreciendo una experiencia casi instantánea a nivel de datos y tiempos muy razonables en las inferencias del modelo LLM."
--->
 
 ---
 layout: default
@@ -310,10 +278,15 @@ layout: default
 
 # Conclusiones
 
+<div class="flex flex-col justify-center h-[75%]">
+
+
 * 💡 **Mitigación de Bloqueos**: La recolección de datos guiada por chat reduce exitosamente la barrera psicológica de la página en blanco para redactar el CV.
 * ⚙️ **Optimización Semántica**: Se logró integrar inferencia en tiempo real de IA de baja latencia sin perjudicar el rendimiento percibido del sistema.
 * 📝 **Salida ATS Friendly**: La renderización por vectores nativa garantiza documentos indexables y legibles al 100% por los sistemas ATS.
 * ⚖️ **Sustentabilidad Técnica**: La arquitectura serverless implementada demuestra una viabilidad económica excelente con un OPEX sumamente reducido.
+
+</div>
 
 <!--
 "Concluimos que la sinergia entre tecnologías web modernas (Next.js) e IA Generativa (Gemini) nivela el campo de juego para los profesionales, transformando la creación de un currículum de una tarea estresante a un proceso estratégico y asistido."
