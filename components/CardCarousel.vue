@@ -86,7 +86,7 @@ const getCardStyle = (index) => {
 
 <template>
   <div 
-    class="card-carousel-container relative w-full max-w-[400px] h-[320px] mx-auto mt-4 flex items-center justify-center cursor-pointer select-none"
+    class="card-carousel-container relative w-full max-w-[460px] h-[360px] mx-auto mt-4 flex items-center justify-center cursor-pointer select-none"
     @click="nextCard"
     @mouseenter="stopAutoPlay"
     @mouseleave="startAutoPlay"
@@ -95,7 +95,7 @@ const getCardStyle = (index) => {
     <div 
       v-for="(card, index) in cards" 
       :key="index"
-      class="card-carousel-item absolute w-[90%] max-h-[220px] rounded-xl shadow-xl border border-gray-200/20 dark:border-gray-700/20 bg-white dark:bg-slate-800 p-2 transition-all duration-500 ease-out"
+      class="card-carousel-item absolute w-full max-h-[270px] rounded-xl shadow-xl border border-gray-200/20 dark:border-gray-700/20 bg-white dark:bg-slate-800 p-2 transition-all duration-500 ease-out"
       :style="getCardStyle(index)"
     >
       <img :src="card.src" :alt="card.alt" class="w-full h-full object-contain rounded-lg pointer-events-none" />
