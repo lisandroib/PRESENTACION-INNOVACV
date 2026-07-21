@@ -222,10 +222,12 @@ Análisis masivo y veloz para comparar un perfil contra múltiples ofertas de em
 
 ::right::
 
-<div class="pl-6 h-full flex items-center justify-center">
-  <div class="rounded-xl shadow-lg border border-gray-200/30 dark:border-gray-700/30 max-h-[380px] w-full h-full min-h-[300px] flex items-center justify-center p-6">
-    <AnalyzingLoader />
-  </div>
+<div class="pl-6 h-full flex flex-col justify-center gap-4">
+  <AnalyzingLoader />
+  <img 
+    src="./Procesamiento Batch de Compatibilidad Laboral.png" 
+    class="rounded-xl shadow-lg border border-gray-200/30 dark:border-gray-700/30 max-h-[250px] w-auto object-contain mx-auto" 
+  />
 </div>
 
 <!--

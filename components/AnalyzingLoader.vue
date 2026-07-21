@@ -1,28 +1,25 @@
 <template>
-  <div class="analyzing-loader-container is-comparing w-full h-full flex flex-col items-center justify-center">
-    <div class="relative flex items-center justify-center w-[160px] h-[160px] mb-8">
+  <div class="analyzing-loader-container is-comparing w-full flex flex-row items-center justify-center gap-6">
+    <div class="relative flex items-center justify-center w-[60px] h-[60px] flex-shrink-0">
       <svg viewBox="0 0 36 36" class="circular-progress-svg absolute inset-0 w-full h-full">
         <circle cx="18" cy="18" r="15.9155" class="circular-progress-bg" />
         <circle cx="18" cy="18" r="15.9155" class="circular-progress-fill" />
       </svg>
     </div>
     
-    <div class="flex flex-col items-center">
-      <div class="analyzing-loader-text text-3xl mb-2">
+    <div class="flex flex-col items-start justify-center">
+      <div class="analyzing-loader-text text-xl">
         <span v-for="(letter, i) in 'Analizando...'.split('')" :key="i" class="analyzing-letter" :style="{ animationDelay: `${i * 0.1}s` }">{{ letter }}</span>
       </div>
-      <span class="text-sm font-bold uppercase tracking-wider text-slate-400 mt-2">Compatibilidad IA</span>
+      <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mt-0.5">Compatibilidad IA</span>
     </div>
   </div>
 </template>
 
 <style scoped>
 .analyzing-loader-container {
-  padding: 40px;
-  background: rgba(17, 24, 39, 0.3);
-  border-radius: 24px;
-  border: 1px solid rgba(139, 92, 246, 0.15);
-  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.2);
+  padding: 8px 16px;
+  background: transparent;
 }
 
 .circular-progress-svg {
