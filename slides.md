@@ -41,10 +41,10 @@ El acceso al mercado laboral profesional se ve condicionado por barreras tecnol�
 <br>
 <br>
 
-* 🤖 **Filtros Automatizados (ATS)**: Las empresas utilizan masivamente Sistemas de Seguimiento de Candidatos (ATS) para pre-clasificar y filtrar CVs.
-* ❌ **Descarte de Talento**: Candidatos altamente capacitados son descartados simplemente porque sus CVs están mal estructurados o son incompatibles con los algoritmos.
-* ✍️ **Bloqueo del Escritor**: Dificultad técnica del candidato para redactar y articular sus logros profesionales e identificar palabras clave críticas.
-* 🔄 **Falta de Feedback**: Ausencia de una retroalimentación inmediata sobre la calidad formal y técnica del documento frente a una oferta específica.
+* **Filtros Automatizados (ATS)**: Las empresas utilizan masivamente Sistemas de Seguimiento de Candidatos (ATS) para pre-clasificar y filtrar CVs.
+* **Descarte de Talento**: Candidatos altamente capacitados son descartados simplemente porque sus CVs están mal estructurados o son incompatibles con los algoritmos.
+* **Bloqueo del Escritor**: Dificultad técnica del candidato para redactar y articular sus logros profesionales e identificar palabras clave críticas.
+* **Falta de Feedback**: Ausencia de una retroalimentación inmediata sobre la calidad formal y técnica del documento frente a una oferta específica.
 
 <!--
 "Fusionamos el problema y el contexto: el talento sobra, pero los sistemas automatizados (ATS) actúan como una barrera técnica. Los candidatos envían documentos genéricos que los algoritmos no pueden leer, y ahí es donde nuestra plataforma interviene para democratizar el proceso de selección."
@@ -62,10 +62,10 @@ Desarrollar **InnovaCV**, una plataforma web que integra Inteligencia Artificial
 <br>
 
 ### Objetivos Específicos
-* 🎨 **Interfaz de Usuario**: Diseñar una experiencia intuitiva, fluida y moderna basada en React y Next.js.
-* 💬 **Recolección Dinámica**: Integrar un motor conversacional (Typebot) para capturar la experiencia profesional de forma guiada.
-* 🧠 **Procesamiento de IA**: Implementar modelos de lenguaje avanzados (Google Gemini) para la optimización semántica y sugerencia de habilidades.
-* ✍️ **Edición Colaborativa**: Construir un editor de texto enriquecido con guardado asíncrono y persistencia segura en base de datos.
+* **Interfaz de Usuario**: Diseñar una experiencia intuitiva, fluida y moderna basada en React y Next.js.
+* **Recolección Dinámica**: Integrar un motor conversacional (Typebot) para capturar la experiencia profesional de forma guiada.
+* **Procesamiento de IA**: Implementar modelos de lenguaje avanzados (Google Gemini) para la optimización semántica y sugerencia de habilidades.
+* **Edición Colaborativa**: Construir un editor de texto enriquecido con guardado asíncrono y persistencia segura en base de datos.
 
 <!--
 "Nuestro meta fue construir una solución integral. No solo un editor visual, sino un ecosistema que capture datos conversacionalmente, los procese semánticamente con IA y los ensamble en un documento técnicamente impecable."
@@ -123,11 +123,11 @@ layout: two-cols
 
 La plataforma recopila la información del usuario de manera conversacional y estructurada:
 
-* 👤 **Datos Personales**: Información de contacto, enlaces y ubicación.
-* 🎓 **Formación Académica**: Historial educativo, instituciones y títulos.
-* 💼 **Experiencia Laboral**: Roles desempeñados, fechas y responsabilidades.
-* 🛠️ **Habilidades**: Competencias técnicas (hard skills) y aptitudes (soft skills).
-* 📝 **Perfil Profesional**: Resumen o extracto introductorio del candidato.
+* **Datos Personales**: Información de contacto, enlaces y ubicación.
+* **Formación Académica**: Historial educativo, instituciones y títulos.
+* **Experiencia Laboral**: Roles desempeñados, fechas y responsabilidades.
+* **Habilidades**: Competencias técnicas (hard skills) y aptitudes (soft skills).
+* **Perfil Profesional**: Resumen o extracto introductorio del candidato.
 
 ::right::
 
@@ -192,10 +192,10 @@ Protección de datos personales y sensibles mediante arquitectura de seguridad m
 <br>
 <br>
 
-* 🛡️ **Tokens de Acceso**: Autenticación *stateless* utilizando JSON Web Tokens (JWT) generados y firmados mediante la librería de criptografía nativa `jose`.
-* 🍪 **Protección XSS**: Almacenamiento de tokens en cookies del navegador utilizando la bandera `HTTP-Only`, lo que impide que scripts Javascript maliciosos de terceros accedan a las credenciales del usuario.
-* 🔐 **Seguridad Adicional**: Cookies con directiva `Secure` (solo HTTPS) y `SameSite: Strict` para mitigar ataques CSRF.
-* 🔑 **Cifrado de Credenciales**: Hash y encriptación irreversible de contraseñas de usuarios utilizando la librería `bcryptjs`.
+* **Tokens de Acceso**: Autenticación *stateless* utilizando JSON Web Tokens (JWT) generados y firmados mediante la librería de criptografía nativa `jose`.
+* **Protección XSS**: Almacenamiento de tokens en cookies del navegador utilizando la bandera `HTTP-Only`, lo que impide que scripts Javascript maliciosos de terceros accedan a las credenciales del usuario.
+* **Seguridad Adicional**: Cookies con directiva `Secure` (solo HTTPS) y `SameSite: Strict` para mitigar ataques CSRF.
+* **Cifrado de Credenciales**: Hash y encriptación irreversible de contraseñas de usuarios utilizando la librería `bcryptjs`.
 
 <!--
 "Para evitar vulnerabilidades de Cross-Site Scripting (XSS), implementamos una autenticación stateless. Generamos tokens JWT y los inyectamos en cookies con la bandera HTTP-Only, haciendo imposible que scripts maliciosos de terceros accedan a las sesiones desde el navegador."
@@ -271,10 +271,10 @@ layout: two-cols
 
 La legibilidad del documento por parte del software de contratación es la prioridad técnica absoluta:
 
-* 📄 **Evitar Canvas y Rasterizado**: Los parsers de ATS no pueden indexar ni leer texto incrustado en imágenes o canvas.
-* 🌐 **Impresión Nativa**: Uso de la librería `react-to-print` para interactuar directamente con el motor de impresión CSS nativo del navegador web.
-* ✏️ **Vectores de Texto Puro**: Genera archivos PDF compuestos por caracteres vectoriales y enlaces interactivos estructurados.
-* 🔍 **Legibilidad del 100%**: Asegura que las palabras clave de los candidatos sean indexadas de manera impecable por los parsers de recursos humanos (ATS).
+* **Evitar Canvas y Rasterizado**: Los parsers de ATS no pueden indexar ni leer texto incrustado en imágenes o canvas.
+* **Impresión Nativa**: Uso de la librería `react-to-print` para interactuar directamente con el motor de impresión CSS nativo del navegador web.
+* **Vectores de Texto Puro**: Genera archivos PDF compuestos por caracteres vectoriales y enlaces interactivos estructurados.
+* **Legibilidad del 100%**: Asegura que las palabras clave de los candidatos sean indexadas de manera impecable por los parsers de recursos humanos (ATS).
 
 ::right::
 
@@ -318,10 +318,10 @@ layout: default
 <div class="flex flex-col justify-center h-[75%]">
 
 
-* 💡 **Mitigación de Bloqueos**: La recolección de datos guiada por chat reduce exitosamente la barrera psicológica de la página en blanco para redactar el CV.
-* ⚙️ **Optimización Semántica**: Se logró integrar inferencia en tiempo real de IA de baja latencia sin perjudicar el rendimiento percibido del sistema.
-* 📝 **Salida ATS Friendly**: La renderización por vectores nativa garantiza documentos indexables y legibles al 100% por los sistemas ATS.
-* ⚖️ **Sustentabilidad Técnica**: La arquitectura serverless implementada demuestra una viabilidad económica excelente con un OPEX sumamente reducido.
+* **Mitigación de Bloqueos**: La recolección de datos guiada por chat reduce exitosamente la barrera psicológica de la página en blanco para redactar el CV.
+* **Optimización Semántica**: Se logró integrar inferencia en tiempo real de IA de baja latencia sin perjudicar el rendimiento percibido del sistema.
+* **Salida ATS Friendly**: La renderización por vectores nativa garantiza documentos indexables y legibles al 100% por los sistemas ATS.
+* **Sustentabilidad Técnica**: La arquitectura serverless implementada demuestra una viabilidad económica excelente con un OPEX sumamente reducido.
 
 </div>
 
@@ -338,9 +338,9 @@ class: text-center
 
 ¿Qué depara el mañana para **InnovaCV**?
 
-* 🔗 **Integración con LinkedIn**: Autocompletado del perfil en un clic mediante autenticación OAuth nativa.
-* 🎤 **Simulador de Entrevistas**: Generación de simulaciones de entrevistas dinámicas basadas en la IA de Gemini con la información ya almacenada del candidato.
-* 🌐 **i18n y Adaptación Local**: Traducción y adecuación automática del CV a normas y formatos internacionales.
+* **Integración con LinkedIn**: Autocompletado del perfil en un clic mediante autenticación OAuth nativa.
+* **Simulador de Entrevistas**: Generación de simulaciones de entrevistas dinámicas basadas en la IA de Gemini con la información ya almacenada del candidato.
+* **i18n y Adaptación Local**: Traducción y adecuación automática del CV a normas y formatos internacionales.
 
 
 
