@@ -21,13 +21,13 @@ import AtsScanner from './components/AtsScanner.vue'
 ### Plataforma Inteligente para la Optimización de Currículums y Análisis de Empleabilidad mediante IA Generativa
 
 <div class="mt-8 text-sm opacity-80 space-y-1">
-  <p><strong>Autores:</strong> Prado Ruiz Agustina, Ibarra Mena Lisandro</p>
+  <p><strong>Autores:</strong> Ibarra Mena Lisandro, Prado Ruiz Agustina</p>
   <p><strong>Tutor:</strong> Ing. Rico, Ernesto</p>
   <p><strong>Institución:</strong> Facultad de Ingeniería, Ingeniería en Informática (2026)</p>
 </div>
 
 <!--
-"Buenos días al tribunal. Hoy presentamos InnovaCV, una plataforma web que utiliza Inteligencia Artificial Generativa para asistir en la creación de currículums optimizados para sistemas ATS y potenciar la inserción laboral."
+Buenas tardes a todos. Profesores, amigos y familiares presentes. Hoy les presentamos nuestro Proyecto Final de Carrera titulado InnovaCV: Es una Plataforma Inteligente para la Optimización de Currículums y Análisis de Empleabilidad mediante IA Generativa. Este trabajo fue desarrollado por Lisandro Ibarra Mena y Agustina Prado Ruiz, bajo la tutoría del Ingeniero Ernesto José Rico, para la carrera de Ingeniería en Informática de la Facultad de Ingeniería.
 -->
 
 ---
@@ -47,7 +47,17 @@ El acceso al mercado laboral profesional se ve condicionado por barreras tecnol�
 * **Falta de Feedback**: Ausencia de una retroalimentación inmediata sobre la calidad formal y técnica del documento frente a una oferta específica.
 
 <!--
-"Fusionamos el problema y el contexto: el talento sobra, pero los sistemas automatizados (ATS) actúan como una barrera técnica. Los candidatos envían documentos genéricos que los algoritmos no pueden leer, y ahí es donde nuestra plataforma interviene para democratizar el proceso de selección."
+"Para comprender el origen de InnovaCV, es necesario analizar el panorama actual de la inserción laboral. Hoy en día, los procesos de selección están automatizados por algoritmos conocidos como Sistemas de Seguimiento de Candidatos (o ATS).
+
+Esta automatización genera barreras críticas:
+
+En primer lugar, los filtros ATS descartan de forma automática una gran cantidad de currículums únicamente por fallas de formato, falta de palabras clave o incompatibilidades de lectura.
+
+Esto provoca que candidatos sumamente capacitados queden fuera de los procesos de selección.
+
+Además, los postulantes suelen enfrentar el denominado 'bloqueo del escritor' al momento de redactar sus logros de manera profesional e identificar las competencias clave que exige el mercado.
+
+Finalmente, existe una marcada falta de retroalimentación inmediata sobre la calidad o pertinencia del documento frente a una búsqueda laboral específica."
 -->
 
 ---
@@ -68,7 +78,17 @@ Desarrollar **InnovaCV**, una plataforma web que integra Inteligencia Artificial
 * **Edición Colaborativa**: Construir un editor de texto enriquecido con guardado asíncrono y persistencia segura en base de datos.
 
 <!--
-"Nuestro meta fue construir una solución integral. No solo un editor visual, sino un ecosistema que capture datos conversacionalmente, los procese semánticamente con IA y los ensamble en un documento técnicamente impecable."
+"Frente a este escenario, planteamos como Objetivo General el desarrollo de InnovaCV, una solución web integral que utiliza Inteligencia Artificial Generativa para asistir activamente al candidato en la creación, formateo, optimización y análisis de empleabilidad de su currículum.
+
+Para alcanzar esta meta, establecimos los siguientes Objetivos Específicos:
+
+Diseñar una interfaz intuitiva, moderna y altamente reactiva utilizando tecnologías como React y Next.js.
+
+Implementar un flujo conversacional guiado mediante Typebot para facilitar la recolección de información sin abrumar al usuario.
+
+Integrar modelos de lenguaje avanzados, específicamente la API de Google Gemini, para el análisis semántico y la sugerencia inteligente de competencias.
+
+Y finalmente, construir un editor enriquecido que permita personalizar y actualizar el documento de forma fluida y con persistencia segura de datos."
 -->
 
 ---
@@ -198,7 +218,17 @@ Protección de datos personales y sensibles mediante arquitectura de seguridad m
 * **Cifrado de Credenciales**: Hash y encriptación irreversible de contraseñas de usuarios utilizando la librería `bcryptjs`.
 
 <!--
-"Para evitar vulnerabilidades de Cross-Site Scripting (XSS), implementamos una autenticación stateless. Generamos tokens JWT y los inyectamos en cookies con la bandera HTTP-Only, haciendo imposible que scripts maliciosos de terceros accedan a las sesiones desde el navegador."
+"Pasando a la arquitectura de seguridad y protección de datos, nos aseguramos de resguardar la información sensible de los usuarios mediante prácticas avanzadas de desarrollo:
+
+Implementamos un esquema de autenticación stateless basado en JSON Web Tokens (JWT) generados y firmados con la librería criptográfica nativa jose.
+credencial digital de identificación que Cada vez que el usuario quiere hacer algo en la página, muestra esa credencial para demostrar quién es.
+
+Para mitigar vulnerabilidades como ataques XSS (Cross-Site Scripting), almacenamos los tokens en cookies del navegador configuradas con la bandera HTTP-Only, evitando que cualquier script de terceros pueda acceder a las credenciales.
+Guardamos ese pase VIP dentro de una caja fuerte del navegador a la que solo tiene acceso el sistema. Esto evita que si algún virus o programa malicioso intenta 'espiar' o robar información en la página, no pueda meter la mano ni robar la identidad del usuario.
+
+Reforzamos la seguridad con directivas Secure y SameSite: Strict para prevenir ataques de falsificación de peticiones (CSRF).
+
+Asimismo, garantizamos el cifrado irreversible de las contraseñas en la base de datos utilizando algoritmos de hashing con bcryptjs."
 -->
 
 ---
@@ -221,7 +251,15 @@ Ecosistema integrado y de alta reactividad para el perfeccionamiento del documen
 </div>
 
 <!--
-"Desarrollamos una interfaz de edición basada en Tiptap. El usuario interactúa con nuestro ChatAssistant; cuando la IA genera una sugerencia de viñeta laboral, el usuario simplemente la selecciona y el sistema inyecta el contenido directamente en el lienzo, eliminando la fricción de copiar y pegar."
+"Respecto al entorno de usuario y la edición, construimos un ecosistema integrado enfocado en la usabilidad:
+
+En el núcleo del editor incorporamos TipTap, un editor WYSIWYG de alto rendimiento que permite la manipulación directa del texto de forma liviana y fluida.
+
+Integramos ChatAssistant, un panel lateral interactivo que permite al usuario interactuar en tiempo real con la IA sobre el contenido de su propio currículum.
+
+Diseñamos una funcionalidad de 'Inserción en un clic', que permite volcar instantáneamente las sugerencias o redacciones generadas por la IA dentro del bloque de texto seleccionado por el usuario.
+
+Además, disponemos de un selector de plantillas que aplica cambios de diseño visual utilizando CSS, manteniendo intacta la estructura de datos guardada."
 -->
 
 ---
@@ -258,7 +296,17 @@ Análisis masivo y veloz para comparar un perfil contra múltiples ofertas de em
 </div>
 
 <!--
-"Uno de los mayores logros analíticos fue el comparador de empleos. Para evitar saturar la red con peticiones individuales, empaquetamos el CV y 10 ofertas en una sola petición Batch. Usamos la API IntersectionObserver en el frontend para ejecutar estas llamadas silenciosamente en segundo plano mientras el usuario hace scroll, manteniendo la UI fluida."
+"Una de las características más innovadoras de la plataforma es el módulo de Análisis de Empleabilidad por Procesamiento Batch:
+
+Diseñamos un endpoint especializado (/api/jobs/compare-batch) capaz de enviar el currículum activo del candidato junto con un lote de 10 ofertas de empleo en una única solicitud HTTP.
+
+Esto optimiza enormemente el consumo de tokens y reduce los tiempos de latencia y sobrecarga en la red.
+
+Para asegurar un rendimiento óptimo de la interfaz de usuario, implementamos carga diferida (lazy loading) mediante la API nativa IntersectionObserver.
+lazy loading: en lugar de procesar miles de ofertas de empleo juntas de entrada, solo cargamos las que el usuario tiene en pantalla.
+IntersectionObserver: mirar cuándo un elemento o tarjeta de empleo entra en la zona visible de la pantalla mientras el usuario hace scroll.
+
+A medida que el usuario se desplaza verticalmente por la lista de empleos, la plataforma calcula en segundo plano y en tiempo real el porcentaje de compatibilidad semántica entre el perfil y las vacantes, mostrando indicadores visuales inmediatos."
 -->
 
 ---
