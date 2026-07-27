@@ -221,7 +221,8 @@ Sobre la arquitectura de seguridad y protección de datos, nos aseguramos de res
 Implementamos un esquema de autenticación stateless basado en JSON Web Tokens (JWT) generados y firmados con la librería criptográfica nativa jose.
 credencial digital de identificación que Cada vez que el usuario quiere hacer algo en la página, muestra esa credencial para demostrar quién es.
 
-Para mitigar vulnerabilidades como ataques XSS (Cross-Site Scripting), almacenamos los tokens en cookies del navegador configuradas con la bandera HTTP-Only, evitando que cualquier script de terceros pueda acceder a las credenciales.
+Para mitigar vulnerabilidades como ataques XSS (Cross-Site Scripting), ...
+
 Guardamos ese pase VIP dentro de una caja fuerte del navegador a la que solo tiene acceso el sistema. Esto evita que si algún virus o programa malicioso intenta 'espiar' o robar información en la página, no pueda meter la mano ni robar la identidad del usuario.
 
 Reforzamos la seguridad con directivas Secure y SameSite: Strict para prevenir ataques de falsificación de peticiones (CSRF).
