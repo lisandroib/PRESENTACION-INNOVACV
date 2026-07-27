@@ -27,7 +27,7 @@ import AtsScanner from './components/AtsScanner.vue'
 </div>
 
 <!--
-Buenas tardes a todos. Profesores, amigos y familiares presentes. Hoy les presentamos nuestro Proyecto Final de Carrera titulado InnovaCV: Es una Plataforma Inteligente para la Optimización de Currículums y Análisis de Empleabilidad mediante IA Generativa. Este trabajo fue desarrollado por Lisandro Ibarra Mena y Agustina Prado Ruiz, bajo la tutoría del Ingeniero Ernesto José Rico, para la carrera de Ingeniería en Informática de la Facultad de Ingeniería.
+Buenas tardes a todos. Profesores, amigos y familiares presentes. Hoy les presentamos nuestro Proyecto Final de Carrera titulado InnovaCV: Es una Plataforma Inteligente para la Optimización de Currículums y Análisis de Empleabilidad mediante IA Generativa. Este trabajo fue desarrollado por Lisandro Ibarra Mena y Agustina Prado Ruiz, bajo la tutoría del Ingeniero Ernesto Rico, para la carrera de Ingeniería en Informática de la Facultad de Ingeniería.
 -->
 
 ---
@@ -49,15 +49,13 @@ El acceso al mercado laboral profesional se ve condicionado por barreras tecnol�
 <!--
 "Para comprender el origen de InnovaCV, es necesario analizar el panorama actual de la inserción laboral. Hoy en día, los procesos de selección están automatizados por algoritmos conocidos como Sistemas de Seguimiento de Candidatos (o ATS).
 
-Esta automatización genera barreras críticas:
-
-En primer lugar, los filtros ATS descartan de forma automática una gran cantidad de currículums únicamente por fallas de formato, falta de palabras clave o incompatibilidades de lectura.
+Estos filtros ATS descartan de forma automática una gran cantidad de currículums únicamente por fallas de formato, falta de palabras clave o incompatibilidades de lectura.
 
 Esto provoca que candidatos sumamente capacitados queden fuera de los procesos de selección.
 
 Además, los postulantes suelen enfrentar el denominado 'bloqueo del escritor' al momento de redactar sus logros de manera profesional e identificar las competencias clave que exige el mercado.
 
-Finalmente, existe una marcada falta de retroalimentación inmediata sobre la calidad o pertinencia del documento frente a una búsqueda laboral específica."
+Finalmente, existe falta de retroalimentación inmediata sobre la calidad o pertinencia del documento frente a una búsqueda laboral específica."
 -->
 
 ---
@@ -218,7 +216,7 @@ Protección de datos personales y sensibles mediante arquitectura de seguridad m
 * 🔑 **Cifrado de Credenciales**: Hash y encriptación irreversible de contraseñas de usuarios utilizando la librería `bcryptjs`.
 
 <!--
-"Pasando a la arquitectura de seguridad y protección de datos, nos aseguramos de resguardar la información sensible de los usuarios mediante prácticas avanzadas de desarrollo:
+Sobre la arquitectura de seguridad y protección de datos, nos aseguramos de resguardar la información sensible de los usuarios mediante siguientes prácticas:
 
 Implementamos un esquema de autenticación stateless basado en JSON Web Tokens (JWT) generados y firmados con la librería criptográfica nativa jose.
 credencial digital de identificación que Cada vez que el usuario quiere hacer algo en la página, muestra esa credencial para demostrar quién es.
