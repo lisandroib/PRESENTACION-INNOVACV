@@ -151,15 +151,14 @@ La plataforma recopila la información del usuario de manera conversacional y es
 
 <div class="pl-6 h-full flex flex-col justify-center">
   <video 
+    src="./assets/demo-typebot1.mp4" 
     autoplay 
     loop 
     muted 
     playsinline
     class="rounded-xl shadow-xl border border-gray-200/30 dark:border-gray-700/30 w-full h-auto"
     @loadeddata="$event.target.playbackRate = 2.0"
-  >
-    <source :src="'/demo-typebot1.mp4'" type="video/mp4" />
-  </video>
+  ></video>
 </div>
 
 <!--
@@ -285,12 +284,12 @@ Análisis masivo y veloz para comparar un perfil contra múltiples ofertas de em
   <div class="relative w-full max-w-[440px] h-[290px] mx-auto mt-2">
     <!-- Imagen de fondo (Buscador) -->
     <img 
-      :src="'/Buscador.png'" 
+      src="./assets/Buscador.png" 
       class="absolute top-0 left-0 z-10 rounded-xl shadow-md border border-gray-200/20 dark:border-gray-700/20 max-h-[195px] w-auto object-contain opacity-70 transform -rotate-3" 
     />
     <!-- Imagen de frente (Procesamiento Batch) -->
     <img 
-      :src="'/Procesamiento Batch de Compatibilidad Laboral.png'" 
+      src="./assets/Procesamiento Batch de Compatibilidad Laboral.png" 
       class="absolute bottom-0 right-0 z-20 rounded-xl shadow-xl border border-gray-200/40 dark:border-gray-700/40 max-h-[205px] w-auto object-contain transform translate-x-6 translate-y-10 hover:scale-105 transition-transform duration-300" 
     />
   </div>
