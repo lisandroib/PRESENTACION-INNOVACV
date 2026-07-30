@@ -151,13 +151,15 @@ La plataforma recopila la información del usuario de manera conversacional y es
 
 <div class="pl-6 h-full flex flex-col justify-center">
   <video 
-    :src="'/demo-typebot1.mp4'" 
     autoplay 
     loop 
     muted 
+    playsinline
     class="rounded-xl shadow-xl border border-gray-200/30 dark:border-gray-700/30 w-full h-auto"
     @loadeddata="$event.target.playbackRate = 2.0"
-  ></video>
+  >
+    <source :src="'/demo-typebot1.mp4'" type="video/mp4" />
+  </video>
 </div>
 
 <!--
