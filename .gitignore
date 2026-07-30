@@ -6,4 +6,8 @@ dist
 
 # Exports
 *.pdf
+!public/*.pdf
+!assets/*.pdf
 *.mp4
+!public/*.mp4
+!assets/*.mp4
