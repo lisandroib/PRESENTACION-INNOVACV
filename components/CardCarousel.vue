@@ -5,12 +5,12 @@ const activeIndex = ref(0);
 let timer = null;
 
 const cards = [
-  { src: './demostracion_landing.png', alt: 'Editor de CV', title: 'Editor Principal' },
-  { src: './educacion.png', alt: 'Sección Educación', title: 'Formación Académica' },
-  { src: './perfil.png', alt: 'Sección Perfil', title: 'Perfil Profesional' },
-  { src: './mis_curriculums.png', alt: 'Mis Currículums', title: 'Panel de Currículums' },
-  { src: './datos personales.png', alt: 'Datos Personales', title: 'Datos de Contacto' },
-  { src: './habilidades.png', alt: 'Sección Habilidades', title: 'Habilidades y Aptitudes' }
+  { src: '/demostracion_landing.png', alt: 'Editor de CV', title: 'Editor Principal' },
+  { src: '/educacion.png', alt: 'Sección Educación', title: 'Formación Académica' },
+  { src: '/perfil.png', alt: 'Sección Perfil', title: 'Perfil Profesional' },
+  { src: '/mis_curriculums.png', alt: 'Mis Currículums', title: 'Panel de Currículums' },
+  { src: '/datos personales.png', alt: 'Datos Personales', title: 'Datos de Contacto' },
+  { src: '/habilidades.png', alt: 'Sección Habilidades', title: 'Habilidades y Aptitudes' }
 ];
 
 // Iniciar la rotación automática (cada 1.5 segundos)

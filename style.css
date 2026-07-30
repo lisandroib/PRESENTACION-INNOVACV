@@ -121,7 +121,7 @@ html.dark .slidev-layout code {
 
 /* Custom premium layouts matching InnovaCV landing */
 .slidev-layout.bg-hero {
-  background-image: linear-gradient(rgba(27, 37, 89, 0.75), rgba(27, 37, 89, 0.85)), url('./Fondo_landing.png') !important;
+  background-image: linear-gradient(rgba(27, 37, 89, 0.75), rgba(27, 37, 89, 0.85)), url('/Fondo_landing.png') !important;
   background-size: cover !important;
   background-position: center !important;
   color: #ffffff !important;
@@ -140,14 +140,14 @@ html.dark .slidev-layout code {
 }
 
 .slidev-layout.bg-dark-section {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)), url('./Fondo_landing.png') !important;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)), url('/Fondo_landing.png') !important;
   background-size: cover !important;
   background-position: center !important;
 }
 
 /* Benefit Cards styling */
 .benefit-card-slides {
-  background-image: url('./benefit-card.png') !important;
+  background-image: url('/benefit-card.png') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
