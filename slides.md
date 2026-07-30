@@ -338,6 +338,26 @@ La legibilidad del documento por parte del software de contratación es la prior
 layout: default
 ---
 
+# Diseño Ético y Cumplimiento (ISO/IEC 42001)
+
+La integración de IA en procesos de selección exige transparencia, equidad y control humano:
+<br>
+<br>
+
+
+*  **Mitigación de Sesgos**: Salvaguardas en el backend para evitar sesgos discriminatorios algorítmicos en la redacción y sugerencias de perfiles.
+*  **Cumplimiento AIMS**: Alineación arquitectónica con los principios establecidos por la norma **ISO/IEC 42001** (Sistemas de Gestión de IA).
+*  **Transparencia y Privacidad**: Aislamiento de datos sensibles de los candidatos y trazabilidad en el procesamiento de inferencias.
+*  **Control Humano (Human-in-the-Loop)**: Interfaz de usuario diseñada para que el candidato siempre revise, modifique y valide activamente las sugerencias de la IA antes de su inserción.
+
+<!--
+"Para cerrar el bloque de ingeniería, es fundamental abordar el diseño ético. Dado que la IA participa en la redacción laboral, nos alineamos con la norma ISO/IEC 42001. Implementamos salvaguardas en el backend para mitigar sesgos de redacción, y en la UX mantenemos el principio de 'Human-in-the-loop', donde el usuario tiene el control absoluto y valida toda sugerencia de la IA antes de incorporarla al documento final."
+-->
+
+---
+layout: default
+---
+
 # Viabilidad Económica (OPEX)
 
 El diseño arquitectónico serverless permite costos operativos mínimos y viabilidad comercial inmediata:
