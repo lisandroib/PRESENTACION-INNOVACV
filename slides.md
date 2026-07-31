@@ -224,9 +224,11 @@ credencial digital de identificación que Cada vez que el usuario quiere hacer a
 
 Para mitigar vulnerabilidades como ataques XSS (Cross-Site Scripting), ...
 
-Guardamos ese pase VIP dentro de una caja fuerte del navegador a la que solo tiene acceso el sistema. Esto evita que si algún virus o programa malicioso intenta 'espiar' o robar información en la página, no pueda meter la mano ni robar la identidad del usuario.
+-Guardamos ese pase VIP dentro de una caja fuerte del navegador a la que solo tiene acceso el sistema. Esto evita que si algún virus o programa malicioso intenta 'espiar' o robar información en la página, no pueda meter la mano ni robar la identidad del usuario.
 
 Reforzamos la seguridad con directivas Secure y SameSite: Strict para prevenir ataques de falsificación de peticiones (CSRF).
+
+-Aseguramos que esa credencial solo viaje por canales totalmente protegidos y que solo se envíe cuando el usuario esté realmente dentro de nuestra página, evitando que otras páginas fraudulentas intenten usar la identidad del usuario a sus espaldas."
 
 Asimismo, garantizamos el cifrado irreversible de las contraseñas en la base de datos utilizando algoritmos de hashing con bcryptjs."
 -->
@@ -253,6 +255,7 @@ Ecosistema integrado y de alta reactividad para el perfeccionamiento del documen
 <!--
 "Respecto al entorno de usuario y la edición, construimos un ecosistema integrado enfocado en la usabilidad:
 
+WIZI-wig
 En el núcleo del editor incorporamos TipTap, un editor WYSIWYG de alto rendimiento que permite la manipulación directa del texto de forma liviana y fluida.
 
 Integramos ChatAssistant, un panel lateral interactivo que permite al usuario interactuar en tiempo real con la IA sobre el contenido de su propio currículum.
@@ -300,7 +303,7 @@ Análisis masivo y veloz para comparar un perfil contra múltiples ofertas de em
 
 Diseñamos un endpoint especializado (/api/jobs/compare-batch) capaz de enviar el currículum activo del candidato junto con un lote de 10 ofertas de empleo en una única solicitud HTTP.
 
-Esto optimiza enormemente el consumo de tokens y reduce los tiempos de latencia y sobrecarga en la red.
+-Esto optimiza enormemente el consumo de tokens y reduce los tiempos de latencia y sobrecarga en la red.
 
 Para asegurar un rendimiento óptimo de la interfaz de usuario, implementamos carga diferida (lazy loading) mediante la API nativa IntersectionObserver.
 lazy loading: en lugar de procesar miles de ofertas de empleo juntas de entrada, solo cargamos las que el usuario tiene en pantalla.
