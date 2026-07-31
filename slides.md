@@ -93,7 +93,7 @@ Y finalmente, construir un editor enriquecido que permita personalizar y actuali
 layout: center
 ---
 
-# Solución Propuesta: Flujo General
+# Flujo General
 <br>
 <br>
 <br>
@@ -355,25 +355,7 @@ La integración de IA en procesos de selección exige transparencia, equidad y c
 "Para cerrar el bloque de ingeniería, es fundamental abordar el diseño ético. Dado que la IA participa en la redacción laboral, nos alineamos con la norma ISO/IEC 42001. Implementamos salvaguardas en el backend para mitigar sesgos de redacción, y en la UX mantenemos el principio de 'Human-in-the-loop', donde el usuario tiene el control absoluto y valida toda sugerencia de la IA antes de incorporarla al documento final."
 -->
 
----
-layout: default
----
 
-# Viabilidad Económica (OPEX)
-
-El diseño arquitectónico serverless permite costos operativos mínimos y viabilidad comercial inmediata:
-
-| Criterio / Servicio | Proveedor | Tipo de Servicio | Costo Mensual |
-| :--- | :--- | :--- | :---: |
-| **Infraestructura Web** | Vercel Pro | Hosting de funciones Serverless | $20.00 USD |
-| **Persistencia** | MongoDB Atlas | Base de datos Serverless (escalable) | ~$9.00 USD |
-| **Consumo de Modelos** | Google Gemini API | Inferencia por token (`gemini-2.5-flash`) | ~$5.00 USD |
-| **Recolección** | Typebot | Plataforma de automatización de chat | $39.00 USD |
-| **Gasto Operativo Total** | | **Para 1,000 usuarios activos mensuales** | **~$73.00 USD** |
-
-<!--
-"El proyecto no solo es técnicamente sólido, sino económicamente viable. Proyectando una etapa de comercialización con un volumen de mil usuarios activos, la arquitectura serverless optimizada requiere un gasto operativo mensual de apenas 73 dólares."
--->
 
 ---
 layout: default
